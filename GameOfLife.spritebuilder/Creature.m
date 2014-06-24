@@ -17,6 +17,9 @@
     
     if (self) {
         self.isAlive = NO;
+        
+        //remove below once done testing
+        self.visible = YES;
     }
     
     return self;
