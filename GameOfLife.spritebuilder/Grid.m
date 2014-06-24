@@ -67,8 +67,7 @@ static const int GRID_COLUMNS = 10;
             
             if (creature.isAlive)
             {
-                NSLog("alive");
-            }
+               NSLog(@"This is it: %@", @"This is my string text!");            }
             
             x+=_cellWidth;
         }
