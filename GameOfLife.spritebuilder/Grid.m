@@ -65,7 +65,10 @@ static const int GRID_COLUMNS = 10;
             // make creatures visible to test this method, remove this once we know we have filled the grid properly
             [creature setIsAlive:YES];
             
-            NSLog(creature.isAlive); //debug
+            if (creature.isAlive)
+            {
+                NSLog("alive");
+            }
             
             x+=_cellWidth;
         }
