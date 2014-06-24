@@ -133,11 +133,11 @@
 			children = (
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
-				B7378992180767190076A88C /* MainScene.h */,
 				4C74F04E195A19FB007129FB /* Grid.h */,
 				4C74F04F195A19FB007129FB /* Grid.m */,
 				4C74F052195A1A2C007129FB /* Creature.h */,
 				4C74F053195A1A2C007129FB /* Creature.m */,
+				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 			);
 			name = Source;
