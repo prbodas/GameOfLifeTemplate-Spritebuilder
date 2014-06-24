@@ -13,13 +13,12 @@
 - (instancetype)initCreature
 {
     // since we made Creature inherit from CCSprite, 'super' below refers to CCSprite
-    self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
+    self = [super initWithImageNamed:@"/Users/Prachi/Desktop/GameOfLifeAssets/Assets/bubble.png
+"];
     
     if (self) {
         self.isAlive = NO;
         
-        //remove below once done testing
-        self.visible = YES;
     }
     
     return self;
