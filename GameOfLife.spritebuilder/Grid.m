@@ -179,11 +179,9 @@ static const int GRID_COLUMNS = 10;
             NSLog(@"    %d", aa); //DEBUG
             if (c.livingNeighbors == 3 || c.livingNeighbors == 2) // comes to life or stays alive
             {
-                [c setIsAlive:YES];
                 c.isAlive = YES;
             }else if(c.livingNeighbors <= 1 || c.livingNeighbors >= 4) // dies or stays dead
             {
-                [c setIsAlive:NO];
                 c.isAlive = NO;
             }
             
