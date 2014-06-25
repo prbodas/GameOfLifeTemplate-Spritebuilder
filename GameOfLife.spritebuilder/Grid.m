@@ -135,13 +135,6 @@ static const int GRID_COLUMNS = 10;
                     {
                         Creature *neighbor = _gridArray[x][y];
                         
-                        if (!neighbor)
-                        {
-                            int _a = 5; // for some reason creatures are coming out as null even though they
-                                        // should all be initialized
-                            _a++;
-                        }
-                        
                         if (neighbor.isAlive)
                         {
                             currentCreature.livingNeighbors += 1;
