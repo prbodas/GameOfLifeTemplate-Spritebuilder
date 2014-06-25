@@ -35,7 +35,7 @@
 {
     if (!_grid)
     {
-        NsLog(@"lllll");
+        NSLog(@"lllll");
     }
     
     [_grid evolveStep];
