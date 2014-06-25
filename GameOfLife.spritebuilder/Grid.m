@@ -79,6 +79,7 @@ static const int GRID_COLUMNS = 10;
     //get the Creature at that location
     int a = (int)(touchLocation.y/_cellHeight);
     int b = (int)(touchLocation.x/_cellWidth);
+    _gridArray[a,b].visible = TRUE;//dir modif
     Creature* creature = _gridArray[a,b];
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
