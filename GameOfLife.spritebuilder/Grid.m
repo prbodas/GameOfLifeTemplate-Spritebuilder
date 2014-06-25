@@ -148,13 +148,13 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *c = _gridArray[i][j];
             if (c.livingNeighbors == 3)
             {
-                c.isAlive = TRUE;
+                c.isAlive = YES;
             }else if (c.livingNeighbors<=1)
             {
-                c.isAlive = FALSE;
+                c.isAlive = NO;
             }else if (c.livingNeighbors>=4)
             {
-                c.isAlive=FALSE;
+                c.isAlive=NO;
             }
             _gridArray[i][j] = c;
         }
