@@ -81,7 +81,7 @@ static const int GRID_COLUMNS = 10;
     int b = (int)(touchLocation.x/_cellWidth);
     Creature* creature = [self creatureForTouchPosition:touchLocation];
     
-    [(Creature*)(_gridArray[a][b]) setIsAlive: !creature.isAlive];
+    _gridArray[a][b] = creature;
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
     //[creature setIsAlive: !creature.isAlive]; //CHANGE BAK TO REVERSE DEBUG
