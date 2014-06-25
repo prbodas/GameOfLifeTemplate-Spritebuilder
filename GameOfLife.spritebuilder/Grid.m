@@ -137,7 +137,7 @@ static const int GRID_COLUMNS = 10;
                         if (!neighbor)
                         {
                             int _a = 5;
-                            a++;
+                            _a++;
                         }
                         
                         if (neighbor.isAlive)
