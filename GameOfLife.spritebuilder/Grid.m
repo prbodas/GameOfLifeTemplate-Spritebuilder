@@ -81,7 +81,7 @@ static const int GRID_COLUMNS = 10;
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
     //[creature setIsAlive: !creature.isAlive]; //CHANGE BAK TO REVERSE DEBUG
-    creature.isAlive = YES;
+    creature.isAlive = !creature.isAlive;
 }
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
@@ -89,7 +89,7 @@ static const int GRID_COLUMNS = 10;
     //get the row and column that was touched, return the Creature inside the corresponding cell
     int row = touchPosition.y/_cellHeight;
     int col = touchPosition.x/_cellWidth;
-    return _gridArray[row][col];
+    return _gridArray[row][col]; // does this create a diff mem address
 }
 
 -(void)evolveStep
