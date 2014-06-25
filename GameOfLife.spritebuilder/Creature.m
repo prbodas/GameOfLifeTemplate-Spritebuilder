@@ -16,7 +16,7 @@
     self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
     
     if (self) {
-        self.isAlive = YES;//change back to no later
+        self.isAlive = NO;//change back to no later
     }else
     {
         NSLog(@"null creature"); // debug
