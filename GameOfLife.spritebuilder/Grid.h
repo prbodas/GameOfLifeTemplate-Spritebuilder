@@ -13,4 +13,7 @@
 @property (nonatomic, assign) int totalAlive; // total cells alive
 @property (nonatomic, assign) int generation; // generation creatures are on
 
+-(void)evolveStep;
+-(void)countNeighbors;
+
 @end
