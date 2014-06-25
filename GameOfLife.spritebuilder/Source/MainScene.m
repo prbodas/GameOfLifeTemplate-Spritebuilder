@@ -14,6 +14,7 @@
     
     if (self) {
         _timer = [[CCTimer alloc] init];
+        _grid = [[Grid alloc]init];
     }
     
     return self;
@@ -33,10 +34,6 @@
 // this method will get called every half second when you hit the play button and will stop getting called when you hit the pause button
 - (void)step
 {
-    if (!_grid)
-    {
-        NSLog(@"lllll");
-    }
     
     [_grid evolveStep];
     _generationLabel.string = [NSString stringWithFormat:@"%d", _grid.generation];
