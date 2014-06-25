@@ -79,20 +79,22 @@ static const int GRID_COLUMNS = 10;
     //get the Creature at that location
     int a = (int)(touchLocation.y/_cellHeight);
     int b = (int)(touchLocation.x/_cellWidth);
-    Creature* creature = _gridArray[a,b];
+    Creature* creature = [self creatureForTouchPosition:touchLocation];
+    
+    [(Creature*)(_gridArray[a][b]) setIsAlive: !creature.isAlive];
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
     //[creature setIsAlive: !creature.isAlive]; //CHANGE BAK TO REVERSE DEBUG
-    creature.isAlive = !creature.isAlive;
+    //creature.isAlive = !creature.isAlive;
 }
 
-//- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
-//{
+- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
+{
     //get the row and column that was touched, return the Creature inside the corresponding cell
-//    int row = touchPosition.y/_cellHeight;
-//    int col = touchPosition.x/_cellWidth;
-//    return _gridArray[row][col]; // does this create a diff mem address
-//}
+    int row = touchPosition.y/_cellHeight;
+    int col = touchPosition.x/_cellWidth;
+    return _gridArray[row][col]; // does this create a diff mem address apparently yes
+}
 
 -(void)evolveStep
 {
