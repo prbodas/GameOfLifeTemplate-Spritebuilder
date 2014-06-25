@@ -21,6 +21,7 @@ static const int GRID_COLUMNS = 10;
         self.totalAlive = 0;
         self.generation = 0;
     }
+    [self onEnter]; //DEBUG
     return self;
 }
     
@@ -78,7 +79,7 @@ static const int GRID_COLUMNS = 10;
     //get the Creature at that location
     Creature *creature = [self creatureForTouchPosition:touchLocation];
     
-    //invert it's state - kill it if it's alive, bring it to life if it's dead.
+    //invert its state - kill it if it's alive, bring it to life if it's dead.
     [creature setIsAlive: !creature.isAlive];
 }
 
@@ -136,7 +137,8 @@ static const int GRID_COLUMNS = 10;
                         
                         if (!neighbor)
                         {
-                            int _a = 5;
+                            int _a = 5; // for some reason creatures are coming out as null even though they
+                                        // should all be initialized
                             _a++;
                         }
                         
