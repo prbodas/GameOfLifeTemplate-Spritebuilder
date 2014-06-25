@@ -164,10 +164,10 @@ static const int GRID_COLUMNS = 10;
             Creature *c = _gridArray[i][j];
             if (c.livingNeighbors == 3) // comes to life or stays alive
             {
-                c.isAlive = YES;
+                [c setIsAlive:YES];
             }else if(c.livingNeighbors <= 1 || c.livingNeighbors >= 4) // dies or stays dead
             {
-                c.isAlive = NO;
+                [c setIsAlive:NO];
             }
             
             if (c.isAlive)
