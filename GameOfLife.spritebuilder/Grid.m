@@ -143,7 +143,7 @@ for (int i = 0; i < [_gridArray count]; i++)
     for (int i = 0; i < [_gridArray count]; i++)
     {
         // iterate through all the columns for a given row
-        for (int j = 0; j < [_gridArray[i] count]; j++)
+        for (int j = 0; j < [_gridArray count]; j++)
         {
             Creature *c = _gridArray[i][j];
             if (c.livingNeighbors == 3)
