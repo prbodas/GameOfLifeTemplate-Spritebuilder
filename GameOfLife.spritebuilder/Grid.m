@@ -159,9 +159,9 @@ static const int GRID_COLUMNS = 10;
 -(void)updateCreatures
 {
     int numAlive = 0;
-    for (int i = 0; i<[_gridArray count]; i++)
+    for (int i = 0; i<GRID_ROWS; i++)
     {
-        for (int j = 0; j<[_gridArray [i]count]; j++)
+        for (int j = 0; j<GRID_COLUMNS; j++)
         {
             Creature *c = _gridArray[i][j];
             if (c.livingNeighbors == 3) // comes to life or stays alive
