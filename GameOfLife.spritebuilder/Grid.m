@@ -154,7 +154,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 c.isAlive = NO;
             }else if (c.livingNeighbors>=4)
             {
-                c.isAlive=NO;
+                c.isAlive = NO;
             }
             _gridArray[i][j] = c;
         }
