@@ -63,12 +63,7 @@ static const int GRID_COLUMNS = 10;
             _gridArray[i][j] = creature;
             
             // make creatures visible to test this method, remove this once we know we have filled the grid properly
-            [creature setIsAlive: YES];
-            
-            if (creature.isAlive)
-            {
-               NSLog(@"This is it: %@", @"This is my string text!");
-            }
+            creature.isAlive = YES;
             
             x+=_cellWidth;
         }
@@ -76,5 +71,4 @@ static const int GRID_COLUMNS = 10;
         y += _cellHeight;
     }
 }
-
 @end
