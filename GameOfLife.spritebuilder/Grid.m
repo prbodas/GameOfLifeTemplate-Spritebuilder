@@ -106,10 +106,10 @@ static const int GRID_COLUMNS = 10;
 {
     // iterate through the rows
     // note that NSArray has a method 'count' that will return the number of elements in the array
-    for (int i = 0; i < [_gridArray count]; i++)
+    for (int i = 0; i < GRID_ROWS; i++)
     {
         // iterate through all the columns for a given row
-        for (int j = 0; j < [_gridArray[i] count]; j++)
+        for (int j = 0; j < GRID_COLUMNS; j++)
         {
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
