@@ -77,7 +77,7 @@ static const int GRID_COLUMNS = 10;
     CGPoint touchLocation = [touch locationInNode:self];
     
     //get the Creature at that location
-    Creature *creature = _gridArray[(int)(touchPosition.y/_cellHeight),(int)(touchPosition.x/_cellWidth)];
+    Creature *creature = _gridArray[(int)(touchLocation.y/_cellHeight),(int)(touchLocation.x/_cellWidth)];
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
     //[creature setIsAlive: !creature.isAlive]; //CHANGE BAK TO REVERSE DEBUG
