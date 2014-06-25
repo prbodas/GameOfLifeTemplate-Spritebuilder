@@ -137,7 +137,7 @@ static const int GRID_COLUMNS = 10;
                     {
                         Creature *neighbor = _gridArray[x][y];
                         
-                        if (neighbor.isAlive)
+                        if (neighbor.isAlive == TRUE) //not working right
                         {
                             currentCreature.livingNeighbors += 1;
                         }
@@ -168,7 +168,7 @@ static const int GRID_COLUMNS = 10;
             Creature *c = _gridArray[i][j];
             NSInteger aa = c.livingNeighbors;
             NSLog(@"    %d", aa); //DEBUG
-            if (c.livingNeighbors == 3) // comes to life or stays alive
+            if (c.livingNeighbors == 3 || c.livingNeighbors == 2) // comes to life or stays alive
             {
                 [c setIsAlive:YES];
                 c.isAlive = YES;
