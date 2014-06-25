@@ -17,6 +17,9 @@
     
     if (self) {
         self.isAlive = YES;//change back to no later
+    }else
+    {
+        NSLog(@"null creature"); // debug
     }
     
     return self;
