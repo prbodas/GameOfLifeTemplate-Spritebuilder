@@ -14,7 +14,6 @@
     
     if (self) {
         _timer = [[CCTimer alloc] init];
-        _grid = [[Grid alloc]init];
     }
     
     return self;
@@ -31,10 +30,9 @@
     [self unschedule:@selector(step)];
 }
 
-// this method will get called every half second when you hit the play button and will stop getting called when you hit the pause button
+// this method will get called every half second when you hit the play button and will stop getting called when you hi the pause button
 - (void)step
 {
-    
     [_grid evolveStep];
     _generationLabel.string = [NSString stringWithFormat:@"%d", _grid.generation];
     _populationLabel.string = [NSString stringWithFormat:@"%d", _grid.totalAlive];
