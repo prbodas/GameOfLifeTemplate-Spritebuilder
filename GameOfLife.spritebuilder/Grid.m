@@ -81,8 +81,8 @@ static const int GRID_COLUMNS = 10;
     
     //invert its state - kill it if it's alive, bring it to life if it's dead.
     //[creature setIsAlive: !creature.isAlive]; //CHANGE BAK TO REVERSE DEBUG
-    [creature setIsAlive: YES]
-    ;
+    [creature setIsAlive: YES];
+    creature.isAlive = YES;
 }
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
@@ -171,9 +171,11 @@ static const int GRID_COLUMNS = 10;
             if (c.livingNeighbors == 3) // comes to life or stays alive
             {
                 [c setIsAlive:YES];
+                c.isAlive = YES;
             }else if(c.livingNeighbors <= 1 || c.livingNeighbors >= 4) // dies or stays dead
             {
                 [c setIsAlive:NO];
+                c.isAlive = NO;
             }
             
             if (c.isAlive)
