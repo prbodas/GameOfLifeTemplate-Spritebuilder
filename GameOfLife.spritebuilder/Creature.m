@@ -16,7 +16,7 @@
     self = [super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
     
     if (self) {
-        self.isAlive = NO;
+        self.isAlive = YES;//change back to no later
     }
     
     return self;
