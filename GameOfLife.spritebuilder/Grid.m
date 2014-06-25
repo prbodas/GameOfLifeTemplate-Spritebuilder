@@ -154,4 +154,29 @@ static const int GRID_COLUMNS = 10;
     return isIndexValid;
 }
 
+-(void)updateCreatures
+{
+    int numAlive = 0;
+    for (int i = 0; i<GRID_ROWS; i++)
+    {
+        for (int j = 0; j<GRID_COLUMNS; j++)
+        {
+            Creature *c = (Creature)(_gridArray[i][j].livingNeighbors);
+            if (c.livingNeighbors == 3) // comes to life or stays alive
+            {
+                _gridArray[i][j].isAlive = YES;
+            }else if(c.livingNeighbors <= 1 || c >= 4) // dies or stays dead
+            {
+                
+            }
+            
+            if (c.isAlive)
+            {
+                numAlive++;
+            }
+        }
+    }
+    _totalAlive = numAlive;
+}
+
 @end
