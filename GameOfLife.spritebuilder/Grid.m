@@ -165,7 +165,7 @@ static const int GRID_COLUMNS = 10;
             if (c.livingNeighbors == 3) // comes to life or stays alive
             {
                 c.isAlive = YES;
-            }else if(c.livingNeighbors <= 1 || c >= 4) // dies or stays dead
+            }else if(c.livingNeighbors <= 1 || c.livingNeighbors >= 4) // dies or stays dead
             {
                 c.isAlive = NO;
             }
