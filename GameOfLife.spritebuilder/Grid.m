@@ -133,6 +133,13 @@ static const int GRID_COLUMNS = 10;
                     if (!((x == i) && (y == j)) && isIndexValid)
                     {
                         Creature *neighbor = _gridArray[x][y];
+                        
+                        if (!neighbor)
+                        {
+                            int _a = 5;
+                            a++;
+                        }
+                        
                         if (neighbor.isAlive)
                         {
                             currentCreature.livingNeighbors += 1;
