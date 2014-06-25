@@ -164,6 +164,8 @@ static const int GRID_COLUMNS = 10;
         for (int j = 0; j<GRID_COLUMNS; j++)
         {
             Creature *c = _gridArray[i][j];
+            NSInteger aa = c.livingNeighbors;
+            NSLog(@"    %d", aa); //DEBUG
             if (c.livingNeighbors == 3) // comes to life or stays alive
             {
                 [c setIsAlive:YES];
